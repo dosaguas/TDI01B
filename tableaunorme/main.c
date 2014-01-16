@@ -72,7 +72,7 @@ int main(void) {
 	{
 		for (j=0;j<3;j++)
 		{
-			printf("%f ",table[i][j]);
+			printf("%03.3f ",table[i][j]);
 		}
 		printf("\n");
 	}	
