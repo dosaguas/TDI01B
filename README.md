@@ -24,7 +24,10 @@ C
 
 - enverschaine : retourne un chaine de caracteres de l'envers
 
+- fibonacci : cacule de la serie fibonacci avec un fonction recurssive
+
 - produitsc : produit de deux matrices
+
 - sommechiffres	: somme de chiffres d'un nombre
 
 - tableauechelle : dessine un tableau avec echelle
