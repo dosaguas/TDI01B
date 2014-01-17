@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using Microsoft.VisualBasic;
 
 namespace Bloc_de_Notes_TDI_01B
 {
@@ -62,6 +64,7 @@ namespace Bloc_de_Notes_TDI_01B
         {
             verifier();
             text.Clear();
+            flag = false;
         }
 
 
@@ -170,6 +173,92 @@ namespace Bloc_de_Notes_TDI_01B
         {
             text.SelectAll();
         }
+
+        private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = fontDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                text.Font = fontDialog1.Font;
+            }
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = colorDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                text.ForeColor = colorDialog1.Color;
+            }
+        }
+
+        private void rechercheStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            int i;
+            string mot;
+
+            mot = Interaction.InputBox("Mot a rechercher", "Recherche", "");
+            i = text.Text.ToUpper().IndexOf(mot.ToUpper(), text.SelectionStart + text.SelectionLength);
+
+            if (i == -1)
+            {
+                MessageBox.Show("Mot introuvable");
+            }
+
+            else
+            {
+
+                text.SelectionStart = i;
+                text.SelectionLength = mot.Length;
+            }
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+ 
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            /*
+            float yPos = 0f;
+            int count = 0;
+            float leftMargin = e.MarginBounds.Left;
+            float topMargin = e.MarginBounds.Top;
+            string line = null;
+            float linesPerPage = e.MarginBounds.Height / printFont.GetHeight(e.Graphics);
+            while (count < linesPerPage)
+            {
+                line = fileToPrint.ReadLine();
+                if (line == null)
+                {
+                    break;
+                }
+                yPos = topMargin + count * printFont.GetHeight(e.Graphics);
+                e.Graphics.DrawString(line, printFont, Brushes.Black, leftMargin, yPos, new StringFormat());
+                count++;
+            }
+            if (line != null)
+            {
+                e.HasMorePages = true;
+            }
+            */
+
+            Brush textcolor = new SolidBrush(text.ForeColor);
+            PointF debut = new PointF();
+            debut.X=100;
+            debut.Y=100;
+
+            e.Graphics.DrawString(text.Text, text.Font, textcolor, debut);
+        }
+
 
     }
 }
