@@ -26,7 +26,13 @@ C
 
 - fibonacci : cacule de la serie fibonacci avec un fonction recurssive
 
+- joursuivant : retourne la date du jour suivant
+
 - produitsc : produit de deux matrices
+
+- racine : calcul de la racine d'un numero
+
+- random : jeux avec l'objectif de deviner 4 numeros generes de maniere aleatorie
 
 - sommechiffres	: somme de chiffres d'un nombre
 
