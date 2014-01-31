@@ -227,36 +227,10 @@ namespace Bloc_de_Notes_TDI_01B
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            /*
-            float yPos = 0f;
-            int count = 0;
-            float leftMargin = e.MarginBounds.Left;
-            float topMargin = e.MarginBounds.Top;
-            string line = null;
-            float linesPerPage = e.MarginBounds.Height / printFont.GetHeight(e.Graphics);
-            while (count < linesPerPage)
-            {
-                line = fileToPrint.ReadLine();
-                if (line == null)
-                {
-                    break;
-                }
-                yPos = topMargin + count * printFont.GetHeight(e.Graphics);
-                e.Graphics.DrawString(line, printFont, Brushes.Black, leftMargin, yPos, new StringFormat());
-                count++;
-            }
-            if (line != null)
-            {
-                e.HasMorePages = true;
-            }
-            */
 
             Brush textcolor = new SolidBrush(text.ForeColor);
-            PointF debut = new PointF();
-            debut.X=100;
-            debut.Y=100;
 
-            e.Graphics.DrawString(text.Text, text.Font, textcolor, debut);
+            e.Graphics.DrawString(text.Text, text.Font, textcolor, 100,100);
         }
 
 

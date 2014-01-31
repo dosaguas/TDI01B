@@ -20,6 +20,16 @@ namespace la_calculatrice
             InitializeComponent();
         }
 
+        private void comma_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (ecran.Text.IndexOf(',') == -1)
+            {
+                ecran.Text += b.Text;
+                mode = false;
+            }
+        }
+
         private void button_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
