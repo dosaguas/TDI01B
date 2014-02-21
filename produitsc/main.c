@@ -3,47 +3,49 @@
 
 int main(int argc, char *argv[])
 {
-    int t1[4][3]={2,4,3,
-                  1,3,6,
-                  7,0,2,
-                  3,2,1};
-                  
-    int t2[3][4]={9,0,1,5,
-                  7,6,2,3,
-                  4,1,2,4};
-    
+    int t1[4][3]= {2,4,3,
+                   1,3,6,
+                   7,0,2,
+                   3,2,1
+                  };
+
+    int t2[3][4]= {9,0,1,5,
+                   7,6,2,3,
+                   4,1,2,4
+                  };
+
     int t3[4][4];
     int i,j;
-    
-    for (i=0;i<4;i++)
+
+    for (i=0; i<4; i++)
     {
-        for (j=0;j<4;j++)
+        for (j=0; j<4; j++)
         {
             t3[i][j]=0 ;
         }
-    }    
-    
-    for (i=0;i<4;i++)
+    }
+
+    for (i=0; i<4; i++)
     {
-        for (j=0;j<4;j++)
+        for (j=0; j<4; j++)
         {
-            for (k=0;k<3;k++)
+            for (k=0; k<3; k++)
             {
                 t3[i][j] += t1[i][k] * t2[k][j];
             }
         }
     }
-            
-    for (i=0;i<4;i++)
+
+    for (i=0; i<4; i++)
     {
-        for (j=0;j<4;j++)
-        {    
-             printf("%4i ",t3[i][j]);
+        for (j=0; j<4; j++)
+        {
+            printf("%4i ",t3[i][j]);
         }
         printf("\n",t3[i][j]);
     }
-       
-  
-  system("PAUSE");	
-  return 0;
+
+
+    system("PAUSE");
+    return 0;
 }
