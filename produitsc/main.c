@@ -27,7 +27,10 @@ int main(int argc, char *argv[])
     {
         for (j=0;j<4;j++)
         {
-            t3[i][j] += t1[i][j] * t2[j][i];
+            for (k=0;k<3;k++)
+            {
+                t3[i][j] += t1[i][k] * t2[k][j];
+            }
         }
     }
             
