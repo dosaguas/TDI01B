@@ -36,8 +36,7 @@ int main(int argc, char *argv[])
     gets(chaine1);
     printf("entrer la deuxieme chaine:");
     gets(chaine2);
-    egal = comparer(chaine1,chaine2);
-    if (egal==true)
+    if (comparer(chaine1,chaine2))
     printf("le comparaison des chaines est identique");
     else
     printf("le comparaison des chainesest different");

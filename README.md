@@ -4,19 +4,20 @@ TDI01B
 
 
 
-Visual C#
+C#
 
 ---------
 
-- *Bloc de Notes TDI-01B* : clon du Bloc de notes
-
-- *la calculatrice* : clon de la calculatrice de Windows
+- Projets en C#
 
 
 
 C
 
 ---------
+- *compchaines* : Comparer deux chaines
+
+- *control* : Exercice 3 du controle
 
 - *date* : retourne le jour d'un date
 
@@ -26,7 +27,17 @@ C
 
 - *fibonacci* : cacule de la serie fibonacci avec un fonction recurssive
 
+- *gestionstr* : Gestion d'un liste de stagiaires avec structures
+
+- *invch* : retourne la date du jour suivant
+
 - *joursuivant* : retourne la date du jour suivant
+
+- *listeavecmenu* : Gestion d'une liste de stagiaires avec un menu
+
+- *listestagiers* : Liste de stagiers
+
+- *nombrepremier* : Verifier si un nombre est premier ou pas
 
 - *produitsc* : produit de deux matrices
 
