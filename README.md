@@ -45,7 +45,7 @@ C
 
 - *random* : jeux avec l'objectif de deviner 4 numeros generes de maniere aleatorie
 
-- *sommechiffres	: somme de chiffres d'un nombre
+- *sommechiffres*	: somme de chiffres d'un nombre
 
 - *tableauechelle* : dessine un tableau avec echelle
 
